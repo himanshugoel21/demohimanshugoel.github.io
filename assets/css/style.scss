@@ -19,6 +19,16 @@ background: linear-gradient(to bottom, transparent 65%, Coral 35%);
   padding: 0 4px;
 }
 
+.img__wrap:hover .img__description_layer {
+  visibility: visible;
+  opacity: 1;
+}
+
+.img__description {
+  transition: .2s;
+  transform: translateY(1em);
+}
+
 /* Create four equal columns that sits next to each other */
 .column {
   flex: 50%;
