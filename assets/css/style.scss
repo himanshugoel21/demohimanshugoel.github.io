@@ -36,13 +36,13 @@ background: linear-gradient(to bottom, transparent 65%, Coral 35%);
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
-  filter: grayscale(1) brightness(0.5);
+  filter: drop-shadow(8px 8px 10px gray) brightness(0.5);
   border-radius: 5px;
-  cursor: pointer;
+  cursor: default;
   transition: 0.3s linear;
 }
 .column img:hover {
-  filter: grayscale(0);
+  filter: drop-shadow(8px 8px 10px gray);;
 }
 @media screen and (max-width: 800px) {
   .column {
@@ -58,6 +58,6 @@ background: linear-gradient(to bottom, transparent 65%, Coral 35%);
     max-width: 100%;
   }
   .column img {
-    filter: grayscale(0) brightness(1);
+    filter: drop-shadow(8px 8px 10px gray); brightness(1);
   }
 }
