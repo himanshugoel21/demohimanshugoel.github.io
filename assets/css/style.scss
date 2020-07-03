@@ -36,7 +36,7 @@ background: linear-gradient(to bottom, transparent 65%, Coral 35%);
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
-  filter: drop-shadow(0) brightness(0.5);
+  filter: drop-shadow(0);
   border-radius: 5px;
   cursor: default;
   transition: 0.3s linear;
@@ -58,6 +58,6 @@ background: linear-gradient(to bottom, transparent 65%, Coral 35%);
     max-width: 100%;
   }
   .column img {
-    filter: drop-shadow(8px 8px 10px grey) brightness(0.5);
+    filter: drop-shadow(8px 8px 10px grey);
   }
 }
