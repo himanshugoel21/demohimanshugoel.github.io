@@ -42,7 +42,7 @@ background: linear-gradient(to bottom, transparent 65%, Coral 35%);
   transition: 0.3s linear;
 }
 .column img:hover {
-  filter: drop-shadow(8px 8px 10px red);;
+  filter: drop-shadow(8px 8px 10px gold);;
 }
 @media screen and (max-width: 800px) {
   .column {
@@ -58,6 +58,6 @@ background: linear-gradient(to bottom, transparent 65%, Coral 35%);
     max-width: 100%;
   }
   .column img {
-    filter: drop-shadow(8px 8px 10px red) brightness(1);
+    filter: drop-shadow(8px 8px 10px gold) brightness(2);
   }
 }
