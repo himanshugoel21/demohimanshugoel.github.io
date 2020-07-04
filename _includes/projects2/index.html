@@ -1,0 +1,55 @@
+<!-- Remote Projects JS -->
+<script src="{{ '/assets/js/remote-projects2.js' | relative_url }}"></script>
+
+<div class="card-columns m-3 mt-5">
+
+  <!-- Remote Projects -->
+  {% for remote_project2 in page.remote_projects2 %}
+
+    {%- for repo in site.github.public_repositories -%}
+      {%- if remote_project2 == repo.name -%}
+        {%- assign project2 = repo -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- assign words = project2.name | split: '-' -%}
+    {%- capture titlecase -%}
+      {%- for word in words -%}
+        {{ word | capitalize | append: ' ' }}
+      {%- endfor -%}
+    {%- endcapture -%}
+
+    {%- assign project2_type = "remote" -%}
+    {%- assign project2_id   = project2.name -%}
+    {%- assign project2_img  = false -%}
+    {%- assign project2_name = titlecase | strip -%}
+    {%- assign project2_desc = project2.description -%}
+    {%- assign project2_url  = project2.html_url -%}
+
+    {% include projects2/project2-card.html %}
+
+    <script>get_tools("{{ site.github.owner_name }}/{{ remote_project }}")</script>
+
+  {% endfor %}
+
+  <!-- Local Projects -->
+  {% for project2 in site.projects2 %}
+
+    {%- assign project2_type  = "local" -%}
+    {%- assign project2_id    = project2.name | slugify -%}
+    {%- assign project2_img   = project2.image -%}
+    {%- assign project2_name  = project2.name -%}
+    {%- assign project2_desc  = project2.description -%}
+    {%- assign project2_tools = project2.tools -%}
+
+    {%- if project2.external_url -%}
+      {%- assign project2_url = project2.external_url -%}
+    {%- else -%}
+      {%- assign project2_url = project2.url | relative_url -%}
+    {%- endif -%}
+
+    {% include projects2/project2-card.html %}
+
+  {% endfor %}
+
+</div>
