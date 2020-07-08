@@ -20,7 +20,6 @@
 
 .nav-item.active {
   font-weight: bold;
-  background: linear-gradient(to bottom, transparent 65%, PaleTurquoise 35%);
 
   &::after {
     @extend .link-after;
